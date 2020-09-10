@@ -1,0 +1,17 @@
+{
+  "name": "labeling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "google-charts": "^2.0.0",
+    "http-vue-loader": "^1.4.2",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raphael Silva do Nascimento",
+  "license": "ISC"
+}

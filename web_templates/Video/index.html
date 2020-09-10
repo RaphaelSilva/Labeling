@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <template id="video-control">
+    <video id="video" controls preload="metadata">
+      <source src="/static/video_process/video.mp4" type="video/mp4">
+      <source src="/static/video_process/video.avi" type="video/avi">
+      <track label="Process1" kind="subtitles" srclang="PS" src="/static/video_process/Test.vtt" default>
+      <track label="Process2" kind="subtitles" srclang="PC" src="/static/video_process/Test2.vtt">
+    </video>    
+  </template>
+
+  <template id="layout">
+    <p>{{ info }} mundo!</p>
+  </template>
+
+  <div id="app">
+    <layout :info="text"></layout>
+    <video-control></video-control>
+  </div>
+
+  <scriptn src="/node_modules/google-charts/dist/googleCharts.js">
+    </script>
+    <script src="/node_modules/vue/dist/vue.js"></script>
+
+    <script>
+      Vue.component('layout', {
+        props: ['info'],
+        template: document.getElementById('layout'),
+      })
+
+      Vue.component('video-control', {
+        template: document.getElementById('video-control'),
+      })
+
+      const app = new Vue({
+        el: '#app',
+        data: {
+          text: "Hello"
+        }
+      })
+
+    </script>
+</body>
+
+</html>
